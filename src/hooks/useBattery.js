@@ -13,23 +13,23 @@ export default function useBattery() {
         setLevel(Math.round(battery.level * 100));
 
         battery.addEventListener("chargingchange", () => {
-			setCharging(battery.charging) /// 
-		});
+            setCharging(battery.charging); ///
+        });
         battery.addEventListener("chargingtimechange", () => {
-			setChargingTime(battery.chargingTime)
-		});
+            setChargingTime(battery.chargingTime);
+        });
         battery.addEventListener("dischargingtimechange", () => {
-			setDischargingTime(battery.dischargingTime)
-		});
+            setDischargingTime(battery.dischargingTime);
+        });
         battery.addEventListener("levelchange", () => {
-			setLevel(battery.level) ///
-		});
+            setLevel(battery.level); ///
+        });
     });
 
     return {
         charging,
         chargingTime,
         dischargingTime,
-        level
+        level,
     };
 }
