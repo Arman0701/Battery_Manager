@@ -13,15 +13,15 @@ export default function App() {
 
     return (
         <div className="wrapper">
-            <h3>Battery status</h3>
-
 			<div className="battery">
 				<div className={`battery-bg ${charging ? "charging" : ""}`} style={{
-					width: `${level}%`
+					width: `${level - 2.6}%`
 				}}></div>
 				<div className="battery-tail"></div>
 				<span>{level}%</span>
 			</div>
+
+			{charging && <span>Charging⚡</span>}
 
 			{charging && chargingTime !== Infinity && 
 				<span>
