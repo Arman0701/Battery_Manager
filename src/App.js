@@ -11,7 +11,7 @@ export default function App() {
         level
     } = useBattery();
 
-    return (
+    return (navigator.getBattery() ? 
         <div className="wrapper">
 			<div className="battery">
 				<div className={`battery-bg ${charging ? "charging" : ""}`} style={{
@@ -33,6 +33,9 @@ export default function App() {
 					Time remaining {convertSeconds(dischargingTime)}
 				</span>
 			}
-        </div>
+        </div> :
+		<span>
+			Your device has not battery.
+		</span>
     );
 }
