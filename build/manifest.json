@@ -1,0 +1,16 @@
+{
+    "name": "Battery Status",
+    "description": "Check your laptop battery status.",
+    "version": "1.0",
+    "manifest_version": 3,
+	"icons": {
+		"16": "icon16.png",
+		"64": "icon64.png",
+		"128": "icon128.png"
+	},
+    "action": {
+		"default_icon": "icon128.png",
+		"default_title": "Battery Status",
+		"default_popup": "index.html"
+    }
+}
